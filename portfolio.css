@@ -60,8 +60,14 @@ ol{
     font-size: 20px;
     text-align: left;
 }
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+}
 table{
     font-size: 20px;
+    width: 100%;
+    border-collapse: collapse;
 }
 form div{
     text-align: left;

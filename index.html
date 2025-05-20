@@ -92,8 +92,8 @@
     <form action="">
         <div>
 
-            <label for="Email">Email:</label>
-            <input id="Email" type="Email" placeholder="Enter Your Email" required>
+            <label for="myform">Email:</label>
+            <input id="emailinput" type="Email" placeholder="Enter Your Email" required>
         </div>
     
     <div>
@@ -111,7 +111,7 @@
     </div>
     
 
-    <button type="submit" class="submit">submit</button>
+    <button id="btn" type="submit" class="submit" disabled>submit</button>
 
     </form>
     </section>
@@ -122,5 +122,20 @@
     <footer>
         <p>@ license verified</p>
     </footer>
+
+    <script>
+         const emailinput = document.getElementById("emailinput");
+         const Btn = document.getElementById("btn");
+         emailinput.addEventListener("input", function () {
+           if (emailinput.value.trim() !== "") {
+             Btn.disabled = false;
+             Btn.style.backgroundColor="darkblue";
+             Btn.style.color="white";
+           } else {
+             Btn.disabled = true;
+             Btn.style.backgroundColor="blue";
+           }
+         });
+    </script>
 </body>
 </html>
